@@ -3,7 +3,7 @@ import EventCard from './EventCard.js'
 import Axios from 'axios'
 
 function EventList(){
-  const [eventList, setEventList] = useState([]);
+  const [eventList, setEventList] = useState(["1", "2"]);
 
   //useEffect(() => {
     // const getEventList = () => {
@@ -20,12 +20,12 @@ function EventList(){
     //getEventList();
   //}, []) /* will need to update as DB changes */
 
-  setEventList(['event1', 'event2'])
+
   return( 
   <section className='event-list grid-view'>
 
-    {eventList.map(event => (
-      <EventCard key = {event.id} event = {event}/>
+    {eventList.map((event, index) => (
+      <EventCard key = {index} event = {event}/>
     ))}
     </section>
     

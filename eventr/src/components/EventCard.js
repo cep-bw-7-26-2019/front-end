@@ -6,10 +6,10 @@ const CardContainer = styled.div`
   width: 20%;
 `;
 
-function EventCard(){
+function EventCard({event}){
   return(
     <CardContainer>
-      <p>Hello, I'm a Card</p>
+      <p>Hello, I'm a Card for {event}</p>
     </CardContainer>
   )
 }
