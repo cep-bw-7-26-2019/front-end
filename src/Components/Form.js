@@ -5,6 +5,7 @@ function Form (props) {
         event: "",
         date: "",
         location: "",
+        description: "",
         id: null
       });
   const handleInput = e => {
@@ -18,6 +19,7 @@ function Form (props) {
       event: "",
       date: "",
       location: "",
+      description: "",
       id: null
     });
   };
@@ -50,6 +52,15 @@ function Form (props) {
               type="text"
               value={input.location}
               name="location"
+              onChange={handleInput}
+            />
+          </label>
+          <label htmlFor="description">
+            Description:{" "}
+            <input
+              type="text"
+              value={input.description}
+              name="description"
               onChange={handleInput}
             />
           </label>

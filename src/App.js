@@ -22,10 +22,12 @@ function App() {
   return (
     <div className="App">
       <div className="Top">
-      <h1>Eventr</h1>
-      <div className="Navbar">
-        <a href="#">Home</a>
-      </div>
+        <h1>Eventr</h1>
+        <div className="Navbar">
+          <a href="#">Home</a>
+          <a href="team.html">About Us</a>
+          <a href="#">Log in</a>
+        </div>
       </div>
       <div className="Event-Container">
         {events.map(event => (
@@ -36,8 +38,8 @@ function App() {
       <div className="Footer">
         <h4>Eventr</h4>
       </div>
-    </div>
-  );
+</div>
+  )
 }
 
 export default App;

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { tsPropertySignature } from "@babel/types";
 
 function Events(props) {
   const [isEditing, setIsEditing] = useState(false);
@@ -6,6 +7,7 @@ function Events(props) {
     event: props.event.event,
     date: props.event.date,
     location: props.event.location,
+    description: props.event.description,
     id: props.event.id
   });
   const handleInput = e => {
@@ -57,6 +59,15 @@ function Events(props) {
                 onChange={handleInput}
               />
             </label>
+            <label htmlFor="description">
+              Description:{" "}
+              <input
+                type="text"
+                value={input.description}
+                name="description"
+                onChange={handleInput}
+              />
+            </label>
           </div>
 
           <button>Update Event</button>
@@ -73,6 +84,8 @@ function Events(props) {
       <p>{props.event.date}</p>
       <h2>Location:</h2>
       <p>{props.event.location}</p>
+      <h2>Description:</h2>
+      <p>{props.event.description}</p>
       <button onClick={handleEdit}>Edit</button>
     </div>
   );
