@@ -3,9 +3,9 @@ import React, { useState } from "react";
 function Events(props) {
   const [isEditing, setIsEditing] = useState(false);
   const [input, setInput] = useState({
-    name: props.event.event,
-    email: props.event.date,
-    role: props.event.location,
+    event: props.event.event,
+    date: props.event.date,
+    location: props.event.location,
     id: props.event.id
   });
   const handleInput = e => {
@@ -35,7 +35,7 @@ function Events(props) {
               <input
                 type="text"
                 value={input.event}
-                event="event"
+                name="event"
                 onChange={handleInput}
               />
             </label>
@@ -52,7 +52,7 @@ function Events(props) {
               Location:{" "}
               <input
                 type="text"
-                value={input.role}
+                value={input.location}
                 name="location"
                 onChange={handleInput}
               />

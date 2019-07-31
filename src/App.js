@@ -21,11 +21,21 @@ function App() {
   console.log("events", events);
   return (
     <div className="App">
+      <div className="Top">
       <h1>Eventr</h1>
-      {events.map(event => (
-        <Events event={event} updateEvent={updateEvent} />
-      ))}
-      <Form addEvent={addEvent} />
+      <div className="Navbar">
+        <a href="#">Home</a>
+      </div>
+      </div>
+      <div className="Event-Container">
+        {events.map(event => (
+          <Events event={event} updateEvent={updateEvent} />
+        ))}
+        <Form addEvent={addEvent} />
+      </div>
+      <div className="Footer">
+        <h4>Eventr</h4>
+      </div>
     </div>
   );
 }
