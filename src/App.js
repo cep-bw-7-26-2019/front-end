@@ -7,7 +7,9 @@ import Events from "./Components/Team";
 function App() {
   const [events, setEvents] = useState([]);
   const addEvent = event => setEvents([...events, event]);
-
+  const deleteEvent = id => {
+    setEvents(events.filter(event => event.id !== id))
+  }
   const updateEvent = uEvent =>
     setEvents([
       ...events.map(event => {
@@ -25,15 +27,16 @@ function App() {
         <h1>Eventr</h1>
         <div className="Navbar">
           <a href="#">Home</a>
-          <a href="team.html">About Us</a>
-          <a href="#">Log in</a>
+          <a href="team.html">About</a>
+          <a href="team.html">My Events</a>
+          <a href="#">Log Out</a>
         </div>
       </div>
       <div className="Event-Container">
         {events.map(event => (
-          <Events event={event} updateEvent={updateEvent} />
+          <Events event={event} updateEvent={updateEvent} deleteEvent={deleteEvent} />
         ))}
-        <Form addEvent={addEvent} />
+        <Form addEvent={addEvent}/>
       </div>
       <div className="Footer">
         <h4>Eventr</h4>

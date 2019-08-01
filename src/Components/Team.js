@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { tsPropertySignature } from "@babel/types";
 
 function Events(props) {
   const [isEditing, setIsEditing] = useState(false);
@@ -72,7 +71,8 @@ function Events(props) {
 
           <button>Update Event</button>
         </form>
-        <button onClick={handleEdit}>go back</button>
+        <button onClick={() => props.deleteEvent(props.event.id)}>Delete</button>
+        <button onClick={handleEdit}>Go Back</button>
       </div>
     );
   }

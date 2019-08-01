@@ -23,9 +23,10 @@ function Form (props) {
       id: null
     });
   };
+
   return (
     <div>
-      <h1>Add an Event</h1>
+      <h1>Add Event</h1>
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="event">
