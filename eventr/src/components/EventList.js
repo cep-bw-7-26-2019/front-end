@@ -3,30 +3,32 @@ import EventCard from './EventCard.js'
 import Axios from 'axios'
 
 function EventList(){
-  const [eventList, setEventList] = useState(["1", "2"]);
 
-  //useEffect(() => {
-    // const getEventList = () => {
-    //   Axios
-    //     .get('')
-    //     .then(response => {
-    //       setEventList(response)
-    //     })
-    //     .catch(error => {
-    //       console.error(error)
-    //     })
-    // }
+  const [eventList, setEventList] = useState([]);
 
-    //getEventList();
-  //}, []) /* will need to update as DB changes */
+//   useEffect(() => {
+//      const getEventList = () => {
+//        Axios
+//          .get('https://lseventr.herokuapp.com/api/events')
+//          .then(response => {
+//            console.log(response);
+//            setEventList(response.data)
+//          })
+//          .catch(error => {
+//            console.error(error)
+//          })
+//      }
+
+//     getEventList();
+// }, []) 
 
 
   return( 
   <section className='event-list grid-view'>
 
-    {eventList.map((event, index) => (
+    {/* {eventList.map((event, index) => (
       <EventCard key = {index} event = {event}/>
-    ))}
+    ))} */}
     </section>
     
     )
