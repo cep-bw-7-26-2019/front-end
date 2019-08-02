@@ -9,7 +9,7 @@ function App() {
   const [events, setEvents] = useState([]);
   function addEvent(event) {
     setEvents([...events, event]);
-    axios.post("https://lseventr.herokuapp.com/api/events",event)
+    axios.post("https://lseventr.herokuapp.com/api/events", event)
     .then(function (response) {
       console.log(response);
     })
@@ -52,9 +52,9 @@ function App() {
       <div className="Top">
         <h1>Eventr</h1>
         <div className="Navbar">
-          <a href="#">Home</a>
-          <a href="team.html">About</a>
-          <a href="team.html">My Events</a>
+          <a href="https://competent-pike-e3b0f7.netlify.com/index.html">Home</a>
+          <a href="https://competent-pike-e3b0f7.netlify.com/about.html">About</a>
+          <a href="https://eventr.netlify.com/">My Events</a>
           <a href="#">Log Out</a>
         </div>
       </div>
