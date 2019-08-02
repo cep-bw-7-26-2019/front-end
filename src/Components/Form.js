@@ -66,7 +66,6 @@ function Form (props) {
             />
           </label>
         </div>
-
         <button>Add Event</button>
       </form>
     </div>
