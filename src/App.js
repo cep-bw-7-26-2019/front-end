@@ -65,7 +65,7 @@ function App() {
         <Form addEvent={addEvent}/>
       </div>
       <div className="Footer">
-        <h4>Eventr</h4>
+        <h4>Eventr 2019</h4>
       </div>
 </div>
   )
